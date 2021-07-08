@@ -88,7 +88,7 @@
 
 
 #################################################################
-###############################################################
+#################################################################
 # print(' Hello World! ')
 
 # 2.
@@ -196,7 +196,7 @@
 # liste = liste.replace(",", "\n")
 # print(liste)
 
-############################################################
+###########################################################
 
 # 1.
 
@@ -269,14 +269,30 @@
 # for i in range(7, -7, -2):
 #     print(i, end=' ')
 
-summe = 0
-mal = 1
-for i in range(1, 11):
-    summe += i
-    mal *= i
-print(summe)
-print(mal)
+# summe = 0
+# mal = 1
+# for i in range(1, 11):
+#     summe += i
+#     mal *= i
+# print(summe)
+# print(mal)
+###########################################################
+###########################################################
+# 4 a
 
-# this is a change i want to see at GitHub
+# a = 'rot'
+# b = 'orange'
+# c = 'gelb'
+# d = 'grun'
+# e = 'hellblau'
+# f = 'blau'
+# g = 'lila'
+# for i in a, b, c, c, d, e, f, g:
+#     print(i)
+# 4 b
+# zahl = ()
+# while True:
+#     zahl = int(input())
+#     if zahl == 0:
+#         break
 
-# this is a commint made for PR
