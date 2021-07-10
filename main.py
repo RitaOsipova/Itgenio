@@ -197,7 +197,6 @@
 # print(liste)
 
 ###########################################################
-
 # 1.
 
 # s = str(input())
@@ -208,6 +207,7 @@
 # elif a != b:
 #     print('no')
 
+###########################################################
 # 2.
 
 # string = str(input())
@@ -215,6 +215,7 @@
 # zahler2 = '*' * zahler1
 # print(zahler2 + string + zahler2)
 
+###########################################################
 # 3.
 # s = str(input())
 # s3 = s[2]
@@ -224,6 +225,7 @@
 # s = s[:-1]+s3
 # print(s)
 
+###########################################################
 # 4.
 
 # s = str(input())
@@ -232,6 +234,7 @@
 # print(f'Plus: {zahler1}')
 # print(f'Minus: {zahler2}')
 
+###########################################################
 # 5.
 
 # wort1 = 'Ritaosipova777'
@@ -244,6 +247,7 @@
 #          break
 # print(f'In diesem Satz sind {i} buchstaben gleich.')
 
+###########################################################
 # 1.
 # string = 'b22%2mZUk$hv3^b^3s85Q#'
 #
@@ -255,6 +259,7 @@
 #     else:
 #         print('3',end='')
 
+###########################################################
 # 2.
 # for i in range(16):
 #     print(i, end=' ')
@@ -277,6 +282,7 @@
 # print(summe)
 # print(mal)
 ###########################################################
+
 ###########################################################
 # 4 a
 
@@ -292,6 +298,7 @@
 
 ###########################################################
 # 4 b
+
 # zahl = ()
 # while True:
 #     zahl = int(input())
@@ -315,6 +322,7 @@
 
 ###########################################################
 # 5a
+
 # while True:
 #     zeile = str(input())
 #     if zeile == 'a':
@@ -328,3 +336,74 @@
 # a = zeile.rfind("a")
 # wort1 = zeile[:a]
 # print(wort1)
+
+###########################################################
+# 1
+
+# satz = str(input())
+# zahl = int(input())
+# for i in range (zahl):
+#     print(satz)
+
+###########################################################
+# 2
+
+# zahl = int(input())
+# zahl += 1
+# for i in range(0, zahl):
+#      print(i, end=' ')
+
+###########################################################
+# 3
+
+# string = str(input())
+# for symbol in string:
+#      print(symbol)
+
+###########################################################
+# 4
+
+# result = 1
+# for i in range(1, 7):
+#     zahl = int(input())
+#     if zahl != 0 :
+#         result = result * zahl
+# print(result)
+
+###########################################################
+# 5
+
+# zahl = int(input())
+# zahler = 0
+# for i in range(1, zahl + 1): 
+#     if zahl % i == 0:
+#         print(i, end=' ')
+#         zahler += 1
+# if zahler == 2:
+#     print('JA')
+# else:
+#     print('NEIN')
+
+###########################################################
+# 7
+
+# zahl = int(input())
+# zahler = 1
+# for i in range(1, zahl + 1):
+#     for a in range(1, zahl + 1):
+#         erg = i * a
+#         print(f'{i} * {a} = {erg}')
+###########################################################
+# 8
+
+# a = int(input())
+# b = int(input())
+# for i in range(a, b + 1):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print('FizzBuzz')
+#     elif i % 3 == 0:
+#         print('Fizz')
+#     elif i % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(i)
