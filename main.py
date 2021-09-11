@@ -461,8 +461,38 @@
 #         print(element)
 
 #5b.#######################################################
-namen = ['Anna','Sahra','Eva','Tim']
-vokal = ['A','E']
-for element in namen:
-    if element[0] in vokal:
-        print(element)
+# namen = ['Anna','Sahra','Eva','Tim']
+# vokal = ['A','E']
+# for element in namen:
+#     if element[0] in vokal:
+#         print(element)
+###########################################################
+###########################################################
+###########################################################
+#1.########################################################
+
+# mylist = input() .split()
+# print(mylist[0])
+# print(mylist[round(len(mylist) / 2)])
+# print(mylist[-1])
+
+#2.########################################################
+
+# mylist = input() .split()
+# for i in range(0, len(mylist)):
+
+#     if i % 2 == 0:
+#         print(mylist[i])
+#3.######################################################## 
+# import random
+# m = int(input())
+# n = []
+# for i in range(0, m):
+#     a = random.randint(1, 10000)
+#     n.append(a)
+# print(n)
+#4.########################################################
+
+# mylist = input() .split()
+# n = int(input())
+# print(int(mylist[n]) ** n)
