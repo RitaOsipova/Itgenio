@@ -210,7 +210,10 @@
 # 6.#######################################################
 
 mylist = ['1','8','6','4','5','4','14','16','16','8','9','36']
+ans = []
 for i in range(0, len(mylist)-1):
-    for r in range(1, len(mylist)-1):
-        if int(mylist[i]) != int(mylist[r]):
-            print(mylist[i])
+    for r in range(i + 1, len(mylist)):
+        if mylist[i] == mylist[r]:
+            ans.append(mylist[i])
+print(ans)
+print(mylist)
