@@ -90,7 +90,7 @@
 
 # 3.#######################################################
 
-myline = 'pegwokfüosdsfhgvhglkloipoijjjjjjwefwerewrwerlpwr'
+# myline = 'pegwokfüosdsfhgvhglkloipoijjjjjjwefwerewrwerlpwr'
 # ans = []
 # mylistunsort = list(myline)
 # print(mylistunsort)
@@ -108,6 +108,46 @@ myline = 'pegwokfüosdsfhgvhglkloipoijjjjjjwefwerewrwerlpwr'
 # print('---------------------------------')    
 # print(ans)
 
-string = input('Введите строку: ').lower()
-x = max(string, key=string.count)
-print(x)
+# string = input('Введите строку: ').lower()
+# x = max(string, key=string.count)
+# print(x)
+
+
+# 9.#######################################################
+
+# mylist = [1,8,6,4,22,14,16,8,9]
+# n = 5
+# mylist.append(n)
+# mylistsort = sorted(mylist)
+# for a in range(0, len(mylistsort)):
+#     if mylistsort[a] == n and mylistsort[a - 1] > mylistsort[a + 1]:
+#         print(mylistsort[a + 1])
+#     else:
+#         if mylistsort[a] == n:
+#             print(mylistsort[a - 1])
+
+# 8.##########################################################
+
+# mylistlong = ['Osipova','Tolksdorf','12','Farbmacher','Saca','51','83']
+# mylistshort = ['Osipova','12','Farbmacher']
+# mylist = mylistlong
+# flag = 0
+# for i in range(0, len(mylist)-1):
+#     if mylist[i].isalpha() and mylist[i+1].isalpha():
+#         print(mylist[i],mylist[i+1])
+#         flag = 1
+# if flag == 0:
+#     print('zu wenig wörter')
+
+# 10.#########################################################
+
+# mystring = 'hallo ich heise rita und bin elf jahe alt'
+# mylist = ['bin', 'elf']
+# my = mystring.split()
+# for i in range(0, len(mylist)-1):
+#     if mylist[i] in my and mylist[i+1] in my and my.index(mylist[i]) < my.index(mylist[i+1]):
+#         print('ja')
+#     elif mylist[i] not in my and mylist[i+1] not in my:
+#         print('keine gleichen')
+#     else:
+#         print('nein')

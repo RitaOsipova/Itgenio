@@ -1701,8 +1701,8 @@
 # n = 5
 # m = []
 # mylist.append(n)
-# for a in range(0, len(mylist)):
-#     if int(mylist[a] > mylist[a+1]):
+# for a in range(0, len(mylist)-1):
+#     if int(mylist[a]) > int(mylist[a+1]):
 
 #10.#######################################################
 
