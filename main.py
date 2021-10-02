@@ -151,3 +151,39 @@
 #         print('keine gleichen')
 #     else:
 #         print('nein')
+
+###########################################################
+################## russische rullet #######################
+
+import random
+
+players = []
+marbles = []
+pnumber = 100
+cplayer = 0
+cmarble = ''
+taken = 0
+
+rules = 'Regeln'
+for i in range(0, 6):
+    marbles.append('green')
+marbles[random.randint(0, 5)] = 'white'
+while pnumber >= 4:
+    pnumber = int(input())
+for r in range(0, pnumber):
+    players.append(str(input(f'whats your name #{r+1} : ')))
+while taken < 6:
+    print(f'player is {players[cplayer]}')
+    input('press enter to continue ...')
+    cmarble = random.choice(marbles)
+    if cmarble == 'white':
+        print(f'white ball, GAME OVER for {players[cplayer]}')
+        break
+    else:
+        print(f'green ball for {players[cplayer]}')
+        marbles.remove('green')
+        taken += 1
+        cplayer += 1
+        if cplayer == pnumber:
+            cplayer = 0
+        print(f'next player is {players[cplayer]}\n')
