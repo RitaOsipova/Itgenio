@@ -155,30 +155,140 @@
 ###########################################################
 ################## russische rullet #######################
 
+# import random
+
+# players = []
+# marbles = []
+# pnumber = 100
+# cplayer = 0
+# cmarble = ''
+# taken = 0
+# rules = 'Welcome to Russian Rulette\n-------------------------- \n'
+
+# print(rules)
+# for i in range(0, 6):
+#     marbles.append('green')
+
+# marbles[random.randint(0, 5)] = 'white'
+# random.shuffle(marbles)
+
+# while pnumber >= 4:
+#     pnumber = int(input('enter number of players: '))
+
+# for r in range(0, pnumber):
+#     players.append(str(input(f'whats your name #{r+1} : ')))
+
+# while taken < 6:
+#     print(f'\nplayer is {players[cplayer]}')
+#     input('press enter to continue ...\n')
+#     cmarble = random.choice(marbles)
+#     if cmarble == 'white':
+#         print(f'white ball, GAME OVER for {players[cplayer]}\n')
+#         break
+#     else:
+#         print(f'green ball for {players[cplayer]}')
+#         marbles.remove('green')
+#         taken += 1
+#         cplayer += 1
+#         if cplayer == pnumber:
+#             cplayer = 0
+#         print(f'next player is {players[cplayer]}\n')
+
+
+# 1.#########################################################
+
+# import random
+
+# players = []
+# marbles = []
+# pnumber = 100
+# cplayer = 0
+# cmarble = ''
+# taken = 0
+# rules = 'regeln'
+
+# print(rules)
+# for i in range(0, 6):
+#     marbles.append('green')
+# marbles[5] = 'lila'
+# marbles[random.randint(0, 4)] = 'white'
+# random.shuffle(marbles)
+# while pnumber >= 4:
+#     pnumber = int(input('players: '))
+# for r in range(0, pnumber):
+#     players.append(str(input(f'whats your name #{r+1} : ')))
+# while taken < 6:
+#     print(f'\nplayer is {players[cplayer]}')
+#     input('press enter to continue ...\n')
+#     cmarble = random.choice(marbles)
+#     if cmarble == 'white':
+#         print(f'white ball, GAME OVER for {players[cplayer]}\n')
+#         break
+#     elif cmarble == 'lila':
+#         print(f'lila ball, GAME OVER for {players[cplayer]}\n')
+#         players.remove(players[cplayer])
+#         taken += 1
+#         pnumber -= 1
+#         cplayer += 1
+#         if cplayer == pnumber:
+#             cplayer = 0
+#         print(f'next player is {players[cplayer]}')
+#         input('press enter to continue ...\n')
+#     else:
+#         print(f'green ball for {players[cplayer]}')
+#         marbles.remove('green')
+#         taken += 1
+#         cplayer += 1
+#         if cplayer == pnumber:
+#             cplayer = 0
+#         print(f'next player is {players[cplayer]}\n')
+
+# 2.#########################################################
+
+
 import random
 
+balls = 0
 players = []
 marbles = []
 pnumber = 100
 cplayer = 0
 cmarble = ''
 taken = 0
+rules = 'regeln'
 
-rules = 'Regeln'
-for i in range(0, 6):
+print(rules)
+balls = int(input('How many balls we play: '))
+for i in range(0, balls):
     marbles.append('green')
-marbles[random.randint(0, 5)] = 'white'
+marbles[5] = 'lila'
+marbles[random.randint(0, 4)] = 'white'
+random.shuffle(marbles)
 while pnumber >= 4:
-    pnumber = int(input())
+    pnumber = int(input('players: '))
 for r in range(0, pnumber):
     players.append(str(input(f'whats your name #{r+1} : ')))
 while taken < 6:
-    print(f'player is {players[cplayer]}')
-    input('press enter to continue ...')
+    print(f'\nplayer is {players[cplayer]}')
+    input('press enter to continue ...\n')
     cmarble = random.choice(marbles)
     if cmarble == 'white':
-        print(f'white ball, GAME OVER for {players[cplayer]}')
+        print(f'white ball, GAME OVER for {players[cplayer]}\n')
         break
+    elif cmarble == 'lila':
+        print(f'lila ball, GAME OVER for {players[cplayer]}\n')
+        players.remove(players[cplayer])
+        taken += 1
+        pnumber -= 1
+        cplayer += 1
+        if cplayer == pnumber:
+            cplayer = 0
+        if len(players) == 1:
+            print(f'the winner is {players[cplayer]}')
+            break
+        print(f'next player is {players[cplayer]}')
+        input('press enter to continue ...\n')
+
     else:
         print(f'green ball for {players[cplayer]}')
         marbles.remove('green')
