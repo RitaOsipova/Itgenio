@@ -246,54 +246,133 @@
 # 2.#########################################################
 
 
-import random
+# import random
 
-balls = 0
-players = []
-marbles = []
-pnumber = 100
-cplayer = 0
-cmarble = ''
-taken = 0
-rules = 'regeln'
+# balls = 0
+# players = []
+# marbles = []
+# pnumber = 100
+# cplayer = 0
+# cmarble = ''
+# taken = 0
+# rules = 'regeln'
 
-print(rules)
-balls = int(input('How many balls we play: '))
-for i in range(0, balls):
-    marbles.append('green')
-marbles[5] = 'lila'
-marbles[random.randint(0, 4)] = 'white'
-random.shuffle(marbles)
-while pnumber >= 4:
-    pnumber = int(input('players: '))
-for r in range(0, pnumber):
-    players.append(str(input(f'whats your name #{r+1} : ')))
-while taken < 6:
-    print(f'\nplayer is {players[cplayer]}')
-    input('press enter to continue ...\n')
-    cmarble = random.choice(marbles)
-    if cmarble == 'white':
-        print(f'white ball, GAME OVER for {players[cplayer]}\n')
-        break
-    elif cmarble == 'lila':
-        print(f'lila ball, GAME OVER for {players[cplayer]}\n')
-        players.remove(players[cplayer])
-        taken += 1
-        pnumber -= 1
-        cplayer += 1
-        if cplayer == pnumber:
-            cplayer = 0
-        if len(players) == 1:
-            print(f'the winner is {players[cplayer]}')
-            break
-        print(f'next player is {players[cplayer]}')
-        input('press enter to continue ...\n')
+# print(rules)
+# balls = int(input('How many balls we play: '))
+# for i in range(0, balls):
+#     marbles.append('green')
+# marbles[5] = 'lila'
+# marbles[random.randint(0, 4)] = 'white'
+# random.shuffle(marbles)
+# while pnumber >= 4:
+#     pnumber = int(input('players: '))
+# for r in range(0, pnumber):
+#     players.append(str(input(f'whats your name #{r+1} : ')))
+# while taken < 6:
+#     print(f'\nplayer is {players[cplayer]}')
+#     input('press enter to continue ...\n')
+#     cmarble = random.choice(marbles)
+#     if cmarble == 'white':
+#         print(f'white ball, GAME OVER for {players[cplayer]}\n')
+#         break
+#     elif cmarble == 'lila':
+#         print(f'lila ball, GAME OVER for {players[cplayer]}\n')
+#         players.remove(players[cplayer])
+#         taken += 1
+#         pnumber -= 1
+#         cplayer += 1
+#         if cplayer == pnumber:
+#             cplayer = 0
+#         if len(players) == 1:
+#             print(f'the winner is {players[cplayer]}')
+#             break
+#         print(f'next player is {players[cplayer]}')
+#         input('press enter to continue ...\n')
 
-    else:
-        print(f'green ball for {players[cplayer]}')
-        marbles.remove('green')
-        taken += 1
-        cplayer += 1
-        if cplayer == pnumber:
-            cplayer = 0
-        print(f'next player is {players[cplayer]}\n')
+#     else:
+#         print(f'green ball for {players[cplayer]}')
+#         marbles.remove('green')
+#         taken += 1
+#         cplayer += 1
+#         if cplayer == pnumber:
+#             cplayer = 0
+#         print(f'next player is {players[cplayer]}\n')
+
+# 1.#########################################################
+
+
+# with open('poems.txt', 'r') as myfile:
+
+#     # myfile.write('''
+#     # Hörst du, wie die Flammen flüstern,
+#     # Knicken, knacken, krachen, knistern,
+#     # Wie das Feuer rauscht und saust,
+#     # Brodelt, brutzelt, brennt und braust?''')
+#     poem = myfile.read()
+#     print(poem)
+
+# 4.#########################################################
+
+# import pickle
+# import random
+# mylist = []
+# summe = 0
+
+# for i in range(0, 11):
+#    mylist.append(random.randint(0, 1000))
+
+# with open('nums', 'wb') as myfile:
+#     pickle.dump(mylist, myfile)
+
+# with open('nums', 'rb') as myfile:
+#     loadlist = pickle.load(myfile)
+# print(loadlist)
+
+# for elment in loadlist:
+#     summe = summe + elment
+# print(summe)
+
+###########################################################
+###########################################################
+###########################################################
+# from PIL import Image
+# image = Image.open('task1.jpg')
+# w = image.width
+# h = image.height
+# print(w,h)
+# image.show()
+# image.thumbnail((1024, 768))
+# image.save('pic-1024x768.jpg')
+# image.thumbnail((600, 400))
+# image.save('pic-600x400.jpg')
+# image.thumbnail((100, 100))
+# image.save('pic-100x100.jpg')
+
+#2#########################################################
+# from PIL import Image
+# image = Image.open('task2.jpg')
+# region1 = image.crop((0, 0, 150, 150))
+# region2 = image.crop((0, 150, 150, 300))
+# region3 = image.crop((150, 0, 300, 150))
+# region4 = image.crop((150, 150, 300, 300))
+# region1 = region1.transpose(Image.ROTATE_90)
+# region2 = region2.transpose(Image.ROTATE_180)
+# region3 = region3.transpose(Image.ROTATE_180)
+# region4 = region4.transpose(Image.ROTATE_270)
+# image.paste(region1, (0, 0))
+# image.paste(region2, (0, 150))
+# image.paste(region3, (150, 0))
+# image.paste(region4, (150, 150))
+# image.save('new_cat.jpg')
+# image.show()
+
+#3#########################################################
+
+# from PIL import Image
+# im1 = Image.open('cat.jpg')
+# im2 = Image.open('flashback.jpg')
+# w = im1.width
+# h = im1.height
+# im2 = im2.resize((w, h))
+# res = Image.blend(im1, im2, 0.25)
+# res.show()
