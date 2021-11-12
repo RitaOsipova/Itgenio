@@ -376,3 +376,72 @@
 # im2 = im2.resize((w, h))
 # res = Image.blend(im1, im2, 0.25)
 # res.show()
+
+###########################################################
+
+# from PIL import Image, ImageDraw
+# image = Image.new('RGB', (500, 600), 'white')
+# draw = ImageDraw.Draw(image)
+# draw.rectangle([0, 0, 500, 600], fill = 'white', outline = 'black', width = 7)
+# draw.rectangle([100, 0, 500, 450], fill = 'red', outline = 'black', width = 7)
+# draw.rectangle([0, 442, 106, 600], fill = 'blue', outline = 'black', width = 7)
+# draw.rectangle([0,0, 105, 125], fill = 'white', outline = 'black', width = 7)
+# draw.rectangle([420, 445, 500, 600], fill = 'white', outline = 'black', width = 7)
+# draw.rectangle([420, 520, 500, 600], fill = 'yellow', outline = 'black', width = 7)
+# image.show()
+
+###########################################################
+###########################################################
+
+# from PIL import Image, ImageDraw, ImageFont
+# f = ImageFont.truetype("Arial", 40)
+# image = Image.open("cat2.jpg").convert("RGBA")
+# txt = Image.new("RGBA", image.size, (255, 255, 255, 0))
+# draw = ImageDraw.Draw(txt)
+# draw.text((200, 350),'Merry\nChristmas!', font = f, fill = (255, 200, 200, 100))
+# result = Image.alpha_composite(image, txt)
+# result.show()
+
+###########################################################
+###########################################################
+
+# import datetime
+# a = datetime.datetime.today().strftime('%B %d, %Y, %I:%M %p')
+# print(a) 
+
+###########################################################
+
+# import datetime
+# year = int(input('please enter year: '))
+# month = int(input('please enter month: '))
+# day = int(input('please enter day: '))
+# a = datetime.date.today()
+# b = datetime.date(year, month, day)
+# print(a - b)
+
+###########################################################
+
+# import datetime
+# year = int(input('please enter year: '))
+# l = 0
+# for r in range(1, 13):
+#     day = datetime.date(year, r, 13)
+#     if day.weekday() == 4:
+#         l += 1
+#         print(f'Friday the 13th found {day}')
+# print(f'There are {l} friday 13th in {year}')
+
+###########################################################
+# Homewok 
+# 1.
+# import datetime
+# money = input() .split()
+# result = 0.0
+# for i in range(0, len(money)):
+#     result = result + float(money[i])
+# print(result)
+
+###########################################################
+# 2.
+# gewicht = int(input('What is your weight at the Earth? '))
+# print(f'Your weight at the Moon is {float(gewicht) / 9.81 * 1.622}')
