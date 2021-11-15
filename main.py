@@ -445,3 +445,37 @@
 # 2.
 # gewicht = int(input('What is your weight at the Earth? '))
 # print(f'Your weight at the Moon is {float(gewicht) / 9.81 * 1.622}')
+
+###########################################################An 
+###########################################################
+###########################################################
+
+import time,random
+
+messeges = ['An apple a day keeps the doctor away.','Its better to be safe than sorry.','Actions speak louder than words.','The early bird catches the worm.']
+
+print(f'Text entery speed check.Enter next sentence.I will start a timer...')
+time.sleep(2)
+print('Ready...')
+time.sleep(1)
+print('Stedy...')
+time.sleep(1)
+print('Go!')
+sentence = random.choice(messeges)
+print(sentence)
+start_time = time.time()
+user_line = str(input())
+end_time = time.time()
+user_time = end_time - start_time
+answer = round(float(len(user_line)) / float(user_time), 6)
+print(f'you have {len(user_line)} symbols and {answer} seconds.\n that are {round(len(user_line) / answer, 2)} symbols in a second.')
+
+if user_line == sentence:
+    print('Yu did no mistake')
+    quit
+elif user_line != sentence:
+    print('You made at least one mistake')
+
+    for r in range(0, len(sentence)):
+            if sentence[r] != user_line[r]:
+                print(f'You madea a mistake.you typed {user_line[r]} insted of {sentence[r]}')
