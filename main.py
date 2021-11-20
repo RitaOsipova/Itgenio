@@ -446,36 +446,91 @@
 # gewicht = int(input('What is your weight at the Earth? '))
 # print(f'Your weight at the Moon is {float(gewicht) / 9.81 * 1.622}')
 
-###########################################################An 
 ###########################################################
 ###########################################################
+###########################################################
 
-import time,random
+# import time,random
 
-messeges = ['An apple a day keeps the doctor away.','Its better to be safe than sorry.','Actions speak louder than words.','The early bird catches the worm.']
+# messeges = ['An apple a day keeps the doctor away.','Its better to be safe than sorry.','Actions speak louder than words.','The early bird catches the worm.']
 
-print(f'Text entery speed check.Enter next sentence.I will start a timer...')
-time.sleep(2)
-print('Ready...')
-time.sleep(1)
-print('Stedy...')
-time.sleep(1)
-print('Go!')
-sentence = random.choice(messeges)
-print(sentence)
-start_time = time.time()
-user_line = str(input())
-end_time = time.time()
-user_time = end_time - start_time
-answer = round(float(len(user_line)) / float(user_time), 6)
-print(f'you have {len(user_line)} symbols and {answer} seconds.\n that are {round(len(user_line) / answer, 2)} symbols in a second.')
+# print(f'Text entery speed check.Enter next sentence.I will start a timer...')
+# time.sleep(2)
+# print('Ready...')
+# time.sleep(1)
+# print('Stedy...')
+# time.sleep(1)
+# print('Go!')
+# sentence = random.choice(messeges)
+# print(sentence)
+# start_time = time.time()
+# user_line = str(input())
+# end_time = time.time()
+# user_time = end_time - start_time
+# answer = round(float(len(user_line)) / float(user_time), 6)
+# print(f'you have {len(user_line)} symbols and {answer} seconds.\n that are {round(len(user_line) / answer, 2)} symbols in a second.')
 
-if user_line == sentence:
-    print('Yu did no mistake')
-    quit
-elif user_line != sentence:
-    print('You made at least one mistake')
+# if user_line == sentence:
+#     print('You did no mistake')
+#     quit
+# elif user_line != sentence:
+#     print('You made at least one mistake')
 
-    for r in range(0, len(sentence)):
-            if sentence[r] != user_line[r]:
-                print(f'You madea a mistake.you typed {user_line[r]} insted of {sentence[r]}')
+#     for r in range(0, len(sentence)):
+#             if sentence[r] != user_line[r]:
+#                 print(f'You madea a mistake.you typed {user_line[r]} insted of {sentence[r]}')
+
+#1.########################################################
+
+# def equate(a, b):
+#     return (a + 4*b)*(a - 3*b) + a
+
+# print(equate(b = 3 ,a = 5))
+
+#2.########################################################
+
+# def find_speed(kilometers, hours):
+#     return round((kilometers * 1000) / (hours * 3600) , 2)
+
+# print(find_speed(100 ,3))
+
+#3.########################################################
+
+# from os import chdir
+
+
+
+# def smallest(a, b , c):
+#     result = 0
+#     if a < b and a < c:
+#         result = a
+#     elif b < a and b < c:
+#         result = b
+#     elif c < a and c < b:
+#         result = c
+#     return result
+
+# print(smallest(101, 101, 10))
+
+###########################################################
+
+# name = str(input('Your name: '))
+# def greeting():
+#     print(f'Hello, {name}!')
+
+# greeting()
+
+# def rectangle(a, b):
+#     print(f'P = {a + b + a + b} \nS = {a * b}')
+
+# rectangle(2, 5)
+
+# n = int(input())
+# def get_random_array(n = 10):
+#     import random
+#     mylist = []
+#     for i in range(0, n):
+#         mylist.append(random.randint(0, 10))
+#     print(mylist)
+
+# get_random_array(n)
