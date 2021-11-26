@@ -512,7 +512,7 @@
 
 # print(smallest(101, 101, 10))
 
-###########################################################
+#1. #######################################################
 
 # name = str(input('Your name: '))
 # def greeting():
@@ -520,10 +520,14 @@
 
 # greeting()
 
+#2. #######################################################
+
 # def rectangle(a, b):
 #     print(f'P = {a + b + a + b} \nS = {a * b}')
 
 # rectangle(2, 5)
+
+#3. #######################################################
 
 # n = int(input())
 # def get_random_array(n = 10):
@@ -534,3 +538,35 @@
 #     print(mylist)
 
 # get_random_array(n)
+
+#4. #######################################################
+
+# n = int(input())
+
+# def get_random_array(n = 10):
+#     import random
+#     mylist = []
+#     for i in range(0, n):
+#         mylist.append(random.randint(0, 10))
+#     print(mylist)
+#     return mylist
+
+# def reverse(newlist):
+#     newlist.reverse()
+#     print(newlist)
+
+# # array = get_random_array(n)
+# reverse(get_random_array(n))
+
+#5. #######################################################
+
+result = 0
+
+def factorial(n = 1):
+    answer = 1
+    for i in range(1, n +1):
+        answer = answer * i
+    return answer
+
+result = ((2 * factorial(5)) + (3 * factorial(8))) / (factorial(6) * factorial(4))
+print(result)
