@@ -560,13 +560,37 @@
 
 #5. #######################################################
 
-result = 0
+# result = 0
 
-def factorial(n = 1):
-    answer = 1
-    for i in range(1, n +1):
-        answer = answer * i
-    return answer
+# def factorial(n = 1):
+#     answer = 1
+#     for i in range(1, n +1):
+#         answer = answer * i
+#     return answer
 
-result = ((2 * factorial(5)) + (3 * factorial(8))) / (factorial(6) * factorial(4))
-print(result)
+# result = ((2 * factorial(5)) + (3 * factorial(8))) / (factorial(6) * factorial(4))
+# print(result)
+
+
+#6. #######################################################
+
+def sum_of_digets(n): 
+    sum = 0
+    for i in str(n):   
+      sum += int(i)        
+    return sum
+
+zahl1 = int(input('1.: '))
+zahl2 = int(input('2.: '))
+
+sum_zahl1 = sum_of_digets(zahl1)
+sum_zahl2 = sum_of_digets(zahl2)
+
+print(f'zahl1: {zahl1}')
+print(f'zahl2: {zahl2}')
+
+if sum_zahl1 < sum_zahl2:
+    print(f'Summ of {zahl2} is bigger.')
+
+else:
+    print(f'Summ of {zahl1} is bigger.')
