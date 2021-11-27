@@ -2,16 +2,27 @@
 ##########################################################
 ##########################################################
 
-# from tkinter import *
+from tkinter import *
 
-# # window settings
-# window = Tk()
-# window.geometry('400x259')
-# window.title('Rita programm')
-# window.maxsize(500, 300)
-# window.minsize(300, 200)
-# # widgets
-# close = Button(text='Close', width=20, command=quit)
-# close.pack(expand=True)
-# # end of program 
-# window.mainloop()
+# window settings
+window = Tk()
+window.geometry('400x500')
+window.title('Widget position')
+
+# widgets
+frame1 = LabelFrame(text='Pack', width=300, height=100)
+frame1.pack(padx=30, pady=10)
+frame2 = LabelFrame(text='Gird', width=300, height=100)
+frame2.pack(padx=30, pady=10)
+frame3 = LabelFrame(text='Place', width=300, height=100)
+frame3.pack(padx=30, pady=10)
+button10 = Button(frame1, text='Button10', highlightbackground='black', fg='white', width=10)
+button10.pack(padx=10, pady=10, side=LEFT)
+button11 = Button(frame1, text='Button11', highlightbackground='black', fg='white', width=10)
+button11.pack(padx=10, pady=10, side=LEFT)
+button12 = Button(frame1, text='Button12', highlightbackground='black', fg='white', width=10)
+button12.pack(padx=10, pady=10, side=LEFT)
+
+# end of program 
+window.mainloop()
+
