@@ -6,38 +6,56 @@ from tkinter import *
 
 # window settings
 window = Tk()
-window.geometry('400x300')
-window.title('')
+window.geometry('570x300')
+window.title('Color picer')
 window.resizable(False, False)
 
 # widgets
+def color_generate(value):
+    red = red_scale.get() 
+    green = green_scale.get()
+    blue = blue_scale.get()
+    color = f'#{red:02x}{green:02x}{blue:02x}'
+    label_color.config(bg=color, text=color)
 
-passwordbox = LabelFrame()
-passwordbox.pack(padx=80, pady=80)
+frame_RGB = LabelFrame(text='Choose color',height=250, width=250)
+frame_RGB.place(x=20, y=20)
 
-label1 = Label(passwordbox, text='Enter password:')
-label1.pack(padx=20)
-inputbox = Entry(passwordbox, background='black', fg='white', justify=CENTER, relief=RAISED, width=20, state=NORMAL)
-inputbox.pack(padx=20)
-label2 = Label(passwordbox, text='Your password:')
-label2.pack(padx=20)
-outputbox = Entry(passwordbox, justify=CENTER, relief=RAISED, width=20,)
-outputbox.pack(padx=20)
+frame_color = LabelFrame(text='Color', height=250, width=250)
+frame_color.place(x=300, y=20)
 
-showbutton = Button(passwordbox, text='Show')
-showbutton.pack(side=BOTTOM)
-
-password = inputbox.get()
-
-outputbox.insert(0, password)
+label_color= Label(font=('Arial',15,'bold'),height=10, width=20,background='color')
+label_color.place(x=330,y=60)
 
 
+red_scale=Scale(frame_RGB, label='Red',from_=0, to=255, orient=HORIZONTAL, width=20,length=200, fg='red',command=color_generate)
+red_scale.place(x=10, y=10)
+
+green_scale=Scale(frame_RGB, label='Green',from_=0, to=255, orient=HORIZONTAL, width=20,length=200, fg='green',command=color_generate)
+green_scale.place(x=10, y=80)
+
+blue_scale=Scale(frame_RGB, label='Blue',from_=0, to=255, orient=HORIZONTAL, width=20,length=200, fg='blue',command=color_generate)
+blue_scale.place(x=10, y=150)
 
 
+# passwordbox = LabelFrame() 
+# passwordbox.pack(padx=80, pady=80)
 
+# label1 = Label(passwordbox, text='Enter password:')
+# label1.pack(padx=20)
+# inputbox = Entry(passwordbox, background='black', fg='white', justify=CENTER, relief=RAISED, width=20, state=NORMAL)
+# inputbox.pack(padx=20)
+# label2 = Label(passwordbox, text='Your password:')
+# label2.pack(padx=20)
+# outputbox = Entry(passwordbox, justify=CENTER, relief=RAISED, width=20,)
+# outputbox.pack(padx=20)
 
+# showbutton = Button(passwordbox, text='Show')
+# showbutton.pack(side=BOTTOM)
 
+# password = inputbox.get()
 
+# outputbox.insert(0, password)
 
 
 
