@@ -16,6 +16,10 @@ def color_generate(value):
     green = green_scale.get()
     blue = blue_scale.get()
     color = f'#{red:02x}{green:02x}{blue:02x}'
+    i_red = 255 - red
+    i_green = 255 - green
+    i_blue = 255 - blue
+    color = f'#{i_red:02x}{i_green:02x}{i_blue:02x}'
     label_color.config(bg=color, text=color)
 
 frame_RGB = LabelFrame(text='Choose color',height=250, width=250)
@@ -24,7 +28,7 @@ frame_RGB.place(x=20, y=20)
 frame_color = LabelFrame(text='Color', height=250, width=250)
 frame_color.place(x=300, y=20)
 
-label_color= Label(font=('Arial',15,'bold'),height=10, width=20,background='color')
+label_color= Label(font=('Arial',15,'bold'),height=10, width=20,background='black', fg='white')
 label_color.place(x=330,y=60)
 
 
