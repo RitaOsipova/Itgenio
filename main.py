@@ -19,8 +19,10 @@ def color_generate(value):
     i_red = 255 - red
     i_green = 255 - green
     i_blue = 255 - blue
-    color = f'#{i_red:02x}{i_green:02x}{i_blue:02x}'
-    label_color.config(bg=color, text=color)
+    i_color = f'#{i_red:02x}{i_green:02x}{i_blue:02x}'
+    label_color.config(bg=color, fg=i_color, text=color)
+    color_box.insert(0, color)
+
 
 frame_RGB = LabelFrame(text='Choose color',height=250, width=250)
 frame_RGB.place(x=20, y=20)
@@ -28,7 +30,7 @@ frame_RGB.place(x=20, y=20)
 frame_color = LabelFrame(text='Color', height=250, width=250)
 frame_color.place(x=300, y=20)
 
-label_color= Label(font=('Arial',15,'bold'),height=10, width=20,background='black', fg='white')
+label_color= Label(font=('Arial',15,'bold'),height=8, width=20,background='black', fg='white')
 label_color.place(x=330,y=60)
 
 
@@ -40,6 +42,11 @@ green_scale.place(x=10, y=80)
 
 blue_scale=Scale(frame_RGB, label='Blue',from_=0, to=255, orient=HORIZONTAL, width=20,length=200, fg='blue',command=color_generate)
 blue_scale.place(x=10, y=150)
+
+color_box = Entry(frame_color, width=6, justify=LEFT, relief=RAISED,)
+color_box.place(x=59,y=180)
+
+
 
 
 # passwordbox = LabelFrame() 
